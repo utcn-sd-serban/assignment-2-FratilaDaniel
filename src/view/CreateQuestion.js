@@ -1,7 +1,8 @@
 import React from "react";
 
 const CreateQuestion = ({ title, text, tags, onCreate, onChange }) => (
-    <div>
+    <div class = "container-fluid">
+     <div class = "Jumbotron">
         <h2>Ask a Question</h2>
         <div>
             <label>Title: </label>
@@ -18,6 +19,7 @@ const CreateQuestion = ({ title, text, tags, onCreate, onChange }) => (
             <br />
             <button onClick={onCreate}>Ask!</button>
         </div>
+    </div>
     </div>
 );
 

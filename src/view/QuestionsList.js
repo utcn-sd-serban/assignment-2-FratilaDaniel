@@ -1,9 +1,10 @@
 import React from "react";
 
 const QuestionsList = ({ questions, onCreateQuestion, onFilterByTag, onFilterByTitle, onChangeFilter, filterTag }) => (
-    <div>
+    <div class = "container-fluid">
+     <div class = "Jumbotron">
         <h2>{ "Questions" }</h2>
-        <table border="1">
+        <table class="table-hover table-dark">
             <thead>
                 <tr>
                     <th>Author</th>
@@ -28,14 +29,19 @@ const QuestionsList = ({ questions, onCreateQuestion, onFilterByTag, onFilterByT
                 }
             </tbody>
         </table>
-        <button onClick={onCreateQuestion}>Ask a question</button>
+        <br/>
+        <button class="btn btn-primary" onClick={onCreateQuestion}>Ask a question</button>
         <br />
+        <br/>
         <label>Filter by keyword</label>
+        &emsp;
             <input value={filterTag} 
                 onChange={ e => onChangeFilter("filterTag", e.target.value) } />
             <br />
-        <button onClick={onFilterByTag}>Filter by tag</button>
-        <button onClick={onFilterByTitle}>Filter by title</button>
+        <button class="btn btn-primary" onClick={onFilterByTag}>Filter by tag</button>
+        <br/>
+        <button class="btn btn-primary" onClick={onFilterByTitle}>Filter by title</button>
+    </div>
     </div>
 );
 

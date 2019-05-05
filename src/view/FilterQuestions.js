@@ -1,7 +1,8 @@
 import React from "react";
 
 const FilterQuestions = ({ questions, filterTag}) => (
-    <div>
+    <div class = "container-fluid">
+     <div class = "Jumbotron">
         <h2>{ "Filtered questions by:"}</h2>
         <h2>{ filterTag}</h2>
         <table border="1">
@@ -29,6 +30,7 @@ const FilterQuestions = ({ questions, filterTag}) => (
                 }
             </tbody>
         </table>
+    </div>
     </div>
 );
 
